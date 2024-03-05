@@ -6,11 +6,10 @@ updateScore();
 
 function updateScore() {
   scoreDisplay.textContent = slider.value;
-  if (scoreDisplay.textContent < 50) {
-    containingDiv.style.backgroundColor = "red";
-  } else {
-    containingDiv.style.backgroundColor = "blue";
-  }
+  scoreDisplay.textContent < 50
+    ? (containingDiv.style.backgroundColor = "red")
+    : (containingDiv.style.backgroundColor = "blue");
+
   containingDiv.style.backgroundColor === "blue"
     ? (scoreDisplay.style.color = "red")
     : (scoreDisplay.style.color = "blue");
