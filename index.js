@@ -1,8 +1,6 @@
 let slider = document.querySelector("#slider");
 let scoreDisplay = document.querySelector("#scoreDisplay");
 let containingDiv = document.getElementById("containingDiv");
-scoreDisplay.textContent = slider.value;
-updateScore();
 
 function updateScore() {
   scoreDisplay.textContent = slider.value;
@@ -15,4 +13,5 @@ function updateScore() {
     : (scoreDisplay.style.color = "blue");
 }
 
+updateScore();
 slider.addEventListener("input", updateScore);
